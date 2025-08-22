@@ -1,35 +1,37 @@
 # ❤️ Heart Failure Prediction
 
-An **AI-powered machine learning project** to **predict the risk of heart failure** based on patient health data.  
-This project uses **classification models** to analyze medical attributes such as age, blood pressure, cholesterol levels, and other vital health indicators.
+An **AI-powered machine learning project** that predicts the **likelihood of heart disease** based on patient health attributes.  
+This project uses **ensemble learning** with Logistic Regression, Random Forest, and Gradient Boosting to achieve better prediction accuracy.
 
 ---
 
 ## ✨ Features
 
-- 📊 **Data Preprocessing** — Handles missing values, normalization, and feature scaling.
-- 🧠 **Machine Learning Models** — Implements and compares multiple models:
+- 📊 **Data Exploration & Visualization**
+  - Histograms, count plots, and correlation heatmaps.
+- 🧠 **Machine Learning Models**
   - Logistic Regression
   - Random Forest
-  - Support Vector Machine (SVM)
-  - XGBoost / Gradient Boosting
-- 📈 **Model Evaluation** — Evaluates accuracy, precision, recall, F1-score, and ROC-AUC.
-- 🖥️ **Interactive Prediction Interface** *(optional Streamlit UI if included)*.
-- 🔍 **Explainable AI (XAI)** — Uses **SHAP** or **LIME** to interpret model predictions (if integrated).
+  - Gradient Boosting
+  - Soft Voting Classifier (Ensemble)
+- 🎯 **Model Evaluation**
+  - Accuracy score
+  - Precision, recall, F1-score
+  - Probability predictions for each model
+- 🧾 **Interactive CLI Prediction**
+  - Accepts patient data as **user input** and predicts the **risk of heart disease**.
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Language** → Python 3.9+
-- **Frameworks & Libraries**:
-  - `pandas` — Data manipulation
-  - `numpy` — Numerical computations
-  - `scikit-learn` — Machine learning models
-  - `matplotlib` / `seaborn` — Data visualization
-  - `xgboost` — Gradient boosting (optional)
-  - `streamlit` — Web app UI *(if included)*
-  - `shap` — Model explainability *(if included)*
+- **Libraries Used**:
+  - `pandas` → Data manipulation
+  - `numpy` → Numerical computations
+  - `seaborn` & `matplotlib` → Visualization
+  - `scikit-learn` → Preprocessing, ML models, evaluation
+  - `xgboost` *(optional if you want to extend models later)*
 
 ---
 
@@ -40,10 +42,15 @@ This project uses **classification models** to analyze medical attributes such a
 git clone https://github.com/krithiga-v/Heart-failure-prediction.git
 cd Heart-failure-prediction
 2️⃣ Install Dependencies
-
-Use the requirements.txt file:
-
 pip install -r requirements.txt
 
-3️⃣Run the Web App 
-streamlit run heart_failure_prediction.py
+3️⃣ Prepare the Dataset
+
+Place your dataset in the project directory.
+
+Update the dataset path in the script if necessary:
+
+df = pd.read_csv("heart.csv")
+
+4️⃣ Run the Script
+python heart_failure_prediction.py
