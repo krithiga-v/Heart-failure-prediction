@@ -46,4 +46,4 @@ Use the requirements.txt file:
 pip install -r requirements.txt
 
 3️⃣Run the Web App 
-streamlit run .py
+streamlit run heart_failure_prediction.py
